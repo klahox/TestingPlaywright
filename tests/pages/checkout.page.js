@@ -8,6 +8,7 @@ export class CheckoutPage {
         this.finishButton = page.locator('id=finish');
         this.completeText = page.locator('//div[@data-test="complete-text"]');
         this.inventoryItems = page.locator('//div[@data-test="inventory-item"]');
+        this.checkoutButton = page.locator('id=checkout');
     }
 
     async fillShippingInfo(firstName, lastName, postalCode) {
@@ -35,5 +36,10 @@ export class CheckoutPage {
             items.push({ name, price });
         }
         return items;
+    }
+
+    async goToCheckout() {
+        await this.checkoutButton.click();
+    
     }
 }

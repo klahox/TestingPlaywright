@@ -30,12 +30,13 @@ test.describe('SauceDemo E2E Tests', () => {
         await inventoryPage.goToCart();
         
         // Verify cart products
-        const cartProducts = await checkoutPage.getProductDetails();
+        const cartProducts = await inventoryPage.getProductDetails();
         expect(cartProducts).toHaveLength(inventoryProducts.length);
         for (const product of cartProducts) {
             expect(productData[product.name]).toBe(product.price);
         }
-
+        await checkoutPage.goToCheckout();
+        
         // Complete checkout
         await checkoutPage.fillShippingInfo(
             checkoutData.firstName,
