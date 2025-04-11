@@ -7,9 +7,9 @@ export class CheckoutCompletePage {
     }
 
     async isOrderComplete() {
-        expect(this.completeText.isVisible());
+        return this.completeText.isVisible();
     }
-    
+
     async verifyUrl(url) {
         return this.page.url().includes(url);
     }
