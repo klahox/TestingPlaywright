@@ -13,8 +13,8 @@ for(let i= 0 ; i < a; i++){
     alert(`Loren es un crack ${i}`);
 }
 
-//Code Insertd from VSC
-//commit from github
-
+//1-Code Insertd from VSC
+//A commit from github
+//2-Este new commit is from my VSC 
 
 
