@@ -10,9 +10,13 @@ export class LoginPage {
         await this.page.goto('https://www.saucedemo.com/');
     }
 
-    async login(username, password) {
+    async fillLoginUserPass(username, password) {
         await this.usernameInput.fill(username);
         await this.passwordInput.fill(password);
+        
+    }
+
+    async doLogin(){
         await this.loginButton.click();
     }
 }
