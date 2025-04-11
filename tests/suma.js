@@ -13,5 +13,7 @@ for(let i= 0 ; i < a; i++){
     alert(`Loren es un crack ${i}`);
 }
 
+//Code Insertd from VSC
+
 
 
